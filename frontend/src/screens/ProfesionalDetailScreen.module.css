@@ -1,0 +1,353 @@
+.page {
+  padding: 1.5rem 0;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.btnVolver {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  width: fit-content;
+}
+.btnVolver:hover {
+  text-decoration: underline;
+}
+
+.hint {
+  color: var(--text);
+  opacity: 0.5;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.errorMsg {
+  color: #f03e3e;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0;
+}
+.successMsg {
+  color: #2f9e44;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--color-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.nombre {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.email {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin: 2px 0 0;
+}
+
+.descripcion {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin: 8px 0 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+.inputFecha {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.calendario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mesNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.mesNavBtn {
+  background: none;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color 0.15s;
+}
+.mesNavBtn:hover:not(:disabled) {
+  border-color: var(--primary);
+}
+.mesNavBtn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.mesLabel {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+
+.diasHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 2px;
+}
+
+.semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.diaBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0;
+  border-radius: 6px;
+  border: 1px solid var(--muted);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+  min-height: 36px;
+}
+.diaBtn:hover {
+  border-color: var(--primary);
+}
+.diaSeleccionado {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--color-on-primary);
+}
+
+.diaVacio {
+  min-height: 36px;
+}
+
+.slotsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.slotBtn {
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+.slotBtn:hover {
+  border-color: var(--primary);
+}
+.slotSeleccionado {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--color-on-primary);
+}
+
+.confirmBox {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.confirmText {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.btnReservar {
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: var(--color-on-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: opacity 0.15s;
+}
+.btnReservar:hover:not(:disabled) {
+  opacity: 0.85;
+}
+.btnReservar:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.btnVolver2 {
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.btnVolver2:hover {
+  background: var(--primary);
+  color: var(--color-on-primary);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+  max-width: 360px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.modalIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #2f9e44;
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.modalTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+
+.modalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  width: 100%;
+  text-align: left;
+}
+.modalInfo p {
+  margin: 0;
+}
+
+.modalHint {
+  font-size: 0.82rem;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.modalBtn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: var(--color-on-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.modalBtn:hover {
+  background: var(--primary-hover);
+}

@@ -1,0 +1,169 @@
+.container {
+  padding: 2.5rem;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--muted);
+}
+
+.form input,
+.form select {
+  flex: 1;
+  min-width: 180px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--muted);
+  font-size: 0.95rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.form input:focus,
+.form select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form button {
+  background: var(--primary);
+  color: var(--color-on-primary);
+  border: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.form button:hover {
+  background: var(--primary-hover);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+  border: 1px solid var(--muted);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.label {
+  color: var(--text);
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+.value {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badgeActive {
+  background: color-mix(in srgb, var(--primary) 20%, transparent);
+  color: var(--primary);
+}
+
+.badgeInactive {
+  background: var(--muted);
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.actionBtn {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btnActivate {
+  background: color-mix(in srgb, #2f9e44 15%, transparent);
+  color: #2f9e44;
+}
+
+.btnActivate:hover {
+  background: color-mix(in srgb, #2f9e44 30%, transparent);
+}
+
+.btnDeactivate {
+  background: color-mix(in srgb, #f59f00 15%, transparent);
+  color: #f59f00;
+}
+
+.btnDeactivate:hover {
+  background: color-mix(in srgb, #f59f00 30%, transparent);
+}
+
+.deleteButton {
+  flex: 1;
+  background: rgba(217, 48, 37, 0.1);
+  color: #d93025;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.deleteButton:hover {
+  background: rgba(217, 48, 37, 0.18);
+}

@@ -1,0 +1,45 @@
+.signupContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupCard {
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 12px;
+  width: 360px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.roles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text);
+}

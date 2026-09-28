@@ -1,0 +1,15 @@
+export const COLORS = {
+  primary: "#6c63ff",
+  error: "#e53e3e",
+  success: "#16a34a",
+  successLight: "#38a169",
+  white: "#fff",
+  borderGray: "#d1d5db",
+  lightGray: "#e5e7eb",
+  mutedGray: "#888",
+  darkGray: "#374151",
+  lightGreen: "#dcfce7",
+  lightAmber: "#fef3c7",
+  amberDark: "#92400e",
+  mercadopagoBlue: "#009ee3",
+} as const;

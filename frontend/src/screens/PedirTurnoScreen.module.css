@@ -1,0 +1,149 @@
+.page {
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnVolver {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+.btnVolver:hover {
+  text-decoration: underline;
+}
+
+.totalCount {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.filterBar {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  flex: 1;
+  min-width: 140px;
+}
+
+.filterLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.6;
+}
+
+.filterInput {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--color-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.cardName {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.cardInfo {
+  font-size: 0.78rem;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.cardUbicacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  opacity: 0.55;
+}
+
+.cardServicios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.servicioChip {
+  font-size: 0.7rem;
+  background: var(--muted);
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+.loadingHint {
+  color: var(--text);
+  opacity: 0.5;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 2rem 0;
+}

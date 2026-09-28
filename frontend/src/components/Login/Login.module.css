@@ -1,0 +1,45 @@
+.loginContainer {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginCard {
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 12px;
+  width: 340px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.forgotLink {
+  grid-column: 1 / -1;
+  text-align: right;
+  font-size: 14px;
+  color: var(--primary);
+  text-decoration: none;
+  margin-top: -8px;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}

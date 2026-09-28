@@ -1,0 +1,499 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  width: 100%;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+/* ── búsqueda ── */
+.searchWrapper {
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  background: var(--surface);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.dropdownItem:hover {
+  background: var(--bg);
+}
+
+.emailHint {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ── modal overlay ── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.subModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.subModal {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── modal header ── */
+.btnClose {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.btnClose:hover {
+  color: var(--text);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatarLarge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent, #4f8ef7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.avatarSmall {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent, #4f8ef7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.modalTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: var(--text);
+}
+
+.modalSubtitle {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.modalSection {
+  border-top: 1px solid var(--muted);
+  padding: 1.25rem 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.formRow label {
+  font-size: 0.9rem;
+  color: var(--text);
+  min-width: 140px;
+}
+
+.formActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.input {
+  width: 100%;
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.inputSmall {
+  width: 70px;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--muted);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btnPrimary {
+  background: var(--accent, #4f8ef7);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+.btnPrimary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: none;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.btnSecondary:hover {
+  background: var(--bg);
+}
+
+.btnDanger {
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btnDanger:hover {
+  background: #c53030;
+}
+
+.btnSmall {
+  background: none;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.btnLink {
+  background: none;
+  border: none;
+  color: var(--accent, #4f8ef7);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0 0.25rem;
+  text-decoration: underline;
+}
+
+.diasEditor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.diaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.diaLabel {
+  width: 32px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.rangosList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.rangoChip {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--bg);
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 0.15rem 0.4rem;
+}
+
+.timeInput {
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.82rem;
+  width: 70px;
+}
+
+.btnRemove {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+.btnRemove:hover {
+  color: #e53e3e;
+}
+
+.btnAdd {
+  background: none;
+  border: 1px dashed var(--muted);
+  border-radius: 6px;
+  padding: 0.1rem 0.45rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.btnAdd:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.turnosList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.turnoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.65rem;
+  background: var(--bg);
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.turnoFecha {
+  color: var(--text);
+}
+
+.turnoEstado {
+  font-size: 0.78rem;
+  margin-top: 2px;
+}
+
+.estadoOCUPADO_SIN_CONFIRMAR {
+  color: #d97706;
+}
+.estadoCONFIRMADO {
+  color: #16a34a;
+}
+.estadoCANCELADO {
+  color: #9ca3af;
+}
+.estadoDESHABILITADO {
+  color: #6b7280;
+}
+
+.slotsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.slotBtn {
+  background: var(--bg);
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.slotBtn:hover {
+  border-color: var(--accent, #4f8ef7);
+}
+
+.slotBtnSelected {
+  background: var(--accent, #4f8ef7);
+  color: #fff;
+  border-color: var(--accent, #4f8ef7);
+}
+
+.confirmDelete {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.warningText {
+  font-size: 0.88rem;
+  color: #e53e3e;
+  margin: 0;
+}
+
+.successMsg {
+  font-size: 0.85rem;
+  color: #16a34a;
+  margin: 0.25rem 0;
+}
+
+.errorMsg {
+  font-size: 0.85rem;
+  color: #e53e3e;
+  margin: 0.25rem 0;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.25rem 0;
+}

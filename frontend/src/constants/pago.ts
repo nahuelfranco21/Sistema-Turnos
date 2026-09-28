@@ -1,0 +1,7 @@
+export const PAGO = {
+  CARD_NUMBER_LENGTH: 12,
+  CVV_MIN_LENGTH: 3,
+  CVV_MAX_LENGTH: 4,
+  DEPOSIT_PERCENTAGE: 0.1,
+  HOLDER_MIN_LENGTH: 3,
+} as const;

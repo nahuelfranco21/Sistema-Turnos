@@ -1,0 +1,187 @@
+.avatarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: #6c63ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.editLink {
+  color: #6c63ff;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.fieldError {
+  color: #e53e3e;
+  font-size: 13px;
+  margin: 0;
+}
+
+.fieldSuccess {
+  color: #38a169;
+  font-size: 13px;
+  margin: 0;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.overlayImg {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.overlayHint {
+  position: absolute;
+  bottom: 24px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rowLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rowValue {
+  font-size: 15px;
+  color: var(--text);
+}
+
+.editorSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.editorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editorLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.editorButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c63ff;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 0;
+}
+
+.editorField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.editorTextarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  resize: vertical;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.editorInput {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.btnSave {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnCancel {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.editorValue {
+  font-size: 15px;
+  color: var(--text);
+  white-space: pre-wrap;
+}

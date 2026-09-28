@@ -1,0 +1,104 @@
+.wrapper {
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  min-width: 12rem;
+  text-align: center;
+}
+
+.navBtn {
+  font-size: 1.5rem;
+  background: none;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  width: 36px; height: 36px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text);
+}
+.navBtn:hover { border-color: var(--primary); color: var(--primary); }
+
+.backBtn {
+  margin-left: auto;
+  font-size: 0.85rem;
+  background: none;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  color: var(--text);
+}
+.backBtn:hover { border-color: var(--primary); color: var(--primary); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.diaHeader {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.5;
+  padding: 0.25rem 0;
+}
+
+.celda {
+  min-height: 90px;
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.celdaVacia {
+  min-height: 90px;
+  background: transparent;
+}
+
+.celdaHoy {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 8%, var(--surface));
+}
+
+.numeroDia {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.turnoChip {
+  font-size: 0.72rem;
+  border-radius: 4px;
+  padding: 1px 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.estadoOCUPADO_SIN_CONFIRMAR { background: #fef3c7; color: #92400e; }
+.estadoCONFIRMADO { background: #d1fae5; color: #065f46; }
+.estadoDESHABILITADO { background: #f3f4f6; color: #4b5563; }
+.estadoCANCELADO { background: #fce4e4; color: #b91c1c; }
+.estadoREPROGRAMAR { background: #ffedd5; color: #c2410c; }
+
+.hint { opacity: 0.5; font-size: 0.9rem; }

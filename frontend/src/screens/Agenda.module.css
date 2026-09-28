@@ -1,0 +1,127 @@
+.container {
+  padding: 2rem;
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.sidebar {
+  width: 240px;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.agendaButton {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+  text-align: left;
+}
+
+.activeAgenda {
+  background: #5b5ce2;
+  color: white;
+}
+
+.newAgendaButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1f3551;
+  color: white;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.controls label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.controls input,
+.controls select {
+  padding: 8px;
+}
+
+.confirmButton {
+  background-color: #5b5ce2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.confirmButton:hover {
+  background-color: #4a4bd1;
+}
+
+.confirmButton:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: 100px repeat(7, 1fr);
+  border: 1px solid #ccc;
+}
+
+.headerCell {
+  background-color: #5b5ce2;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.fecha {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.timeCell {
+  background: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.slot {
+  height: 45px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.slot:hover {
+  background-color: #f3f3f3;
+}
+
+.disponible {
+  background-color: green;
+}
+
+.noDisponible {
+  background-color: red;
+}

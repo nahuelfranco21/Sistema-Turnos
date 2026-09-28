@@ -1,0 +1,350 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  width: 100%;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leftCol,
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.hint {
+  color: var(--text);
+  opacity: 0.5;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  background: var(--surface);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.dropdownItem:hover {
+  background: var(--muted);
+}
+
+.turnosList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.turnoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--color-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.avatarSmall {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--color-on-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.turnoNombre {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.turnoFecha {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+.turnoEstado {
+  font-size: 0.75rem;
+  margin-top: 2px;
+  font-weight: 500;
+}
+.estadoOCUPADO_SIN_CONFIRMAR {
+  color: #f59f00;
+}
+.estadoCONFIRMADO {
+  color: #2f9e44;
+}
+.estadoDESHABILITADO {
+  color: #868e96;
+}
+.estadoCANCELADO {
+  color: #f03e3e;
+}
+.errorMsg {
+  color: #f03e3e;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+}
+
+.btnCancelar {
+  flex-shrink: 0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #f03e3e;
+  background: transparent;
+  color: #f03e3e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.btnCancelar:hover {
+  background: #f03e3e;
+  color: #fff;
+}
+
+.btnTurno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: var(--color-on-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btnTurno:hover {
+  opacity: 0.85;
+}
+
+.btnCalendario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.btnCalendario:hover {
+  background: var(--primary);
+  color: var(--color-on-primary);
+}
+
+.recientesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recienteItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.recienteItem:hover {
+  border-color: var(--primary);
+}
+
+.recienteNombre {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.recienteEmail {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 14px;
+  padding: 1.75rem;
+  max-width: 360px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modalTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+.modalText {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.75;
+}
+.modalActions {
+  display: flex;
+  gap: 0.75rem;
+}
+.btnConfirmarCancelacion {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #f03e3e;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btnConfirmarCancelacion:hover {
+  opacity: 0.85;
+}
+.btnModalVolver {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+  background: transparent;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btnModalVolver:hover {
+  border-color: var(--primary);
+}
+
+.btnConfirmar {
+  flex-shrink: 0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background: #2f9e44;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btnConfirmar:hover {
+  background: #2b8a3e;
+}
+
+.btnReprogramar {
+  flex-shrink: 0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background: #e8590c;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btnReprogramar:hover {
+  background: #d9480f;
+}
